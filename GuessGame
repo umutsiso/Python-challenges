@@ -1,0 +1,20 @@
+#!/usr/bin/python
+
+import random
+a = random.randint(0,100)
+
+userInput = -1
+while userInput != a :
+    try:
+        userInput = int(raw_input("Try to guess\n"))
+        if (userInput > a):
+            print "go lower!"
+        elif (userInput < a):
+            print "go higher!"
+        else:
+            print "you guessed it right !!!"
+    except:        
+        print "please enter integer"
+        pass
+
+
