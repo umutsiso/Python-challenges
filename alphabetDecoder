@@ -1,0 +1,76 @@
+import string
+
+'''
+Need to convert given string by shifting each letter by 2indexes to the right
+'''
+
+alphabet = string.ascii_lowercase
+print alphabet
+
+print alphabet.index("o")
+print alphabet.index("q")
+
+print alphabet.index("k")
+print alphabet.index("m")
+
+print alphabet.index("e")
+print alphabet.index("g")
+
+sampleStr = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfy \
+r'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
+
+sampleList = []
+sampleList += sampleStr
+print sampleStr[0]
+sampleList[0] = "i"
+print sampleList[0]
+
+
+for i in range(len(sampleList)):
+    if sampleList[i] == "z":
+        sampleList[i] = "b"
+    elif sampleList[i] == "y":
+        sampleList[i] = "a"
+    elif sampleList[i] not in alphabet:
+        pass
+    else:
+        currentIndex = alphabet.index(sampleList[i])
+        sampleList[i] = alphabet[currentIndex + 2]
+
+print sampleList
+resutString = "".join(sampleList)
+print resutString
+
+
+urlSite = "http://www.pythonchallenge.com/pc/def/map.html"
+urlList = []
+urlList += urlSite
+
+for i in range(len(urlList)):
+    if urlList[i] == "z":
+        urlList[i] = "b"
+    elif urlList[i] == "y":
+        urlList[i] = "a"
+    elif urlList[i] not in alphabet:
+        pass
+    else:
+        currentIndex = alphabet.index(urlList[i])
+        urlList[i] = alphabet[currentIndex + 2]
+
+print urlList
+resutString = "".join(urlList)
+print resutString
+
+
+
+
+''' BY USING MAKETRANS IN STEAD '''
+
+intab = "aeiou"
+outtab = "12345"
+trantab = maketrans(intab, outtab)
+
+str = "this is string example....wow!!!"
+print str.translate(trantab)
+
+
