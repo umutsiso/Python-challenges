@@ -1,0 +1,18 @@
+#!/usr/bin/python
+
+import random 
+
+sentence = raw_input("Enter a Sentence")
+
+length = sentence.__len__()
+print length
+
+
+list1 = []
+list1 += sentence
+print list1
+random.shuffle(list1)
+print list1
+strFinal = "".join(list1)
+print strFinal
+
